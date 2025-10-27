@@ -37,10 +37,10 @@ procedure addBuffer
     .snd = Read from file: input_sound_folder$ + "/" + filename$ 
     fs = Get sampling frequency
 
-    sl1 = Create Sound from formula: "sl1", 1, 0, 0.333, fs, "0"
+    sl1 = Create Sound from formula: "sl1", 1, 0, buffer, fs, "0"
     selectObject: .snd
     Copy: "tmp_sound"
-    sl2 = Create Sound from formula: "sl2", 1, 0, 0.333, fs, "0"
+    sl2 = Create Sound from formula: "sl2", 1, 0, buffer, fs, "0"
 
     selectObject: sl1, "Sound tmp_sound", sl2
     Concatenate
